@@ -36,6 +36,7 @@ img {
 }
 
 body {
+  display: none;
   font-family: "JetBrains Mono", monospace;
   margin: 0;
   background-color: #f9fafb;
@@ -44,6 +45,21 @@ body {
   background-size: 100px 100px;
   padding-left: 80px;
   padding-right: 80px;
+}
+
+.desktop-message {
+  display: none; /* Domyślnie ukrywamy komunikat */
+}
+
+@media (min-width: 768px) {
+  body {
+    display: block; /* Pokazujemy zawartość na komputerach */
+  }
+}
+@media (max-width: 767px) {
+  .desktop-message {
+    display: block; /* Pokazujemy komunikat na urządzeniach mobilnych */
+  }
 }
 
 /* STYLES */
