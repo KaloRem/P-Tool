@@ -4,23 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Generator Wykresów</title>
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <style>
-      canvas {
-        max-width: 600px;
-        margin: 20px auto;
-      }
-      .element {
-        margin-bottom: 20px;
-      }
-    </style>
   </head>
   <body>
-    <h1>Generator Wykresów</h1>
-    <button id="addElement">Dodaj Element</button>
-    <button id="removeAll">Usuń Wszystkie Elementy</button>
+    <div class="main_container">
+      <h1 class="main_headline">
+        <span class="main_headline_red">Generator</span> Wykresów
+      </h1>
+      <div class="buttons_container">
+        <button class="main_button" id="addElement">Dodaj Element</button>
+        <button class="main_button" id="removeAll">
+          Usuń Wszystkie Elementy
+        </button>
+      </div>
+    </div>
 
-    <div id="elementsContainer"></div>
+    <div class="elementContainer" id="elementsContainer"></div>
 
     <script src="./script.js"></script>
   </body>

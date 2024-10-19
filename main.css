@@ -1,0 +1,174 @@
+/* RESETS */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  padding: 0px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: "JetBrains Mono", monospace;
+  margin: 0;
+  background-color: #f9fafb;
+  background-image: linear-gradient(#e5e7eb 1px, #0000 0),
+    linear-gradient(90deg, #e5e7eb 1px, #0000 0);
+  background-size: 100px 100px;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+/* STYLES */
+/* Main container */
+.main_container {
+  padding: 40px 0px 80px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main_headline {
+  color: black;
+  animation: black_color_change 4s infinite;
+}
+@keyframes black_color_change {
+  50% {
+    color: #810000;
+  }
+}
+
+.main_headline_red {
+  color: #810000;
+  animation: red_color_change 4s infinite;
+}
+@keyframes red_color_change {
+  50% {
+    color: black;
+  }
+}
+
+.buttons_container {
+  display: flex;
+  gap: 20px;
+}
+
+button {
+  background-color: #810000;
+  font-weight: bold;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: black;
+}
+
+/* Elements */
+.element {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 4px;
+  background-color: #f2f2f2;
+}
+
+.elementsMainButtons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.elementHeadline {
+  font-style: italic;
+}
+
+.elementContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dataForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dataEntry {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.addPerson {
+  background-color: transparent;
+  border: 2px solid #810000;
+  color: #810000;
+  transition: all 0.3s ease;
+}
+.addPerson:hover {
+  background-color: #810000;
+  color: white;
+}
+
+input {
+  background-color: white;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  background-color: #810000;
+  color: white;
+}
+
+canvas {
+  display: none;
+}
+
+.categoryForm {
+  display: flex;
+  justify-content: space-between;
+}
+
+.categotyConfiguration {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

@@ -8,24 +8,30 @@ document.getElementById("addElement").onclick = function () {
   elementDiv.id = elementId;
 
   elementDiv.innerHTML = `
-                <h3>Wykres ${elementsCount}</h3>
-                <button class="removeElement">Usuń Element</button>
-                <div class="dataForm">
-                    <div class="dataEntry">
-                        <label>Imię: <input type="text" class="name" placeholder="Podaj imię"></label>
-                        <button class="removePerson">Usuń osobę</button>
-                    </div>
-                    <button class="addPerson">Dodaj kolejną osobę</button>
-                    <div class="categoryForm">
-                        <label>Nazwa kategorii: <input type="text" class="categoryName" placeholder="Podaj nazwę kategorii"></label>
-                        <button class="createCategory">Utwórz kategorię</button>
-                    </div>
-                    <div class="newCategoryContainer"></div>
-                    <button class="createChart">Utwórz/aktualizuj wykres</button>
-                    <button class="updateFields">Aktualizuj pola</button>
-                    <canvas id="chart${elementsCount}"></canvas>
-                </div>
-            `;
+            <div class="elementsMainButtons">
+              <h3 class="elementHeadline">Wykres ${elementsCount}</h3>
+              <div class="elementButtonsContainer">
+                <button class="removeElement elementButton">Usuń Element</button>
+                <button class="createChart elementButton">Utwórz/aktualizuj wykres</button>
+                <button class="updateFields elementButton">Aktualizuj pola</button>
+              </div>
+            </div>
+            <div class="elementContent">
+              <div class="dataForm"> 
+                  <div class="dataEntry">
+                      <label class="personName">Imię: <input type="text" class="name" placeholder="Podaj imię"></label>
+                      <button class="removePerson">Usuń osobę</button>
+                  </div>
+                  <button class="addPerson">Dodaj kolejną osobę</button>
+                  <div class="categoryForm">
+                      <label>Nazwa kategorii: <input type="text" class="categoryName" placeholder="Podaj nazwę kategorii"></label>
+                      <button class="createCategory">Utwórz kategorię</button>
+                  </div>
+                  <div class="newCategoryContainer"></div>
+              </div>
+              <canvas class="canvas" id="chart${elementsCount}"></canvas>
+            </div>
+          `;
 
   document.getElementById("elementsContainer").appendChild(elementDiv);
 
@@ -44,7 +50,7 @@ document.getElementById("addElement").onclick = function () {
     const dataEntry = document.createElement("div");
     dataEntry.className = "dataEntry";
     dataEntry.innerHTML = `
-                    <label>Imię: <input type="text" class="name" placeholder="Podaj imię"></label>
+                    <label class="personName">Imię: <input type="text" class="name" placeholder="Podaj imię"></label>
                     <button class="removePerson">Usuń osobę</button>
                 `;
     elementDiv
@@ -69,7 +75,7 @@ document.getElementById("addElement").onclick = function () {
         newCategoryDiv.className = "categoryEntry";
         newCategoryDiv.innerHTML = `
                         <strong>${categoryName}</strong>
-                        <div>
+                        <div class="categotyConfiguration">
                             <label>Wartości dla osób:</label>
                             ${names
                               .map(
