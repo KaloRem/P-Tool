@@ -1,9 +1,14 @@
 function checkDeviceWidth() {
   if (window.innerWidth < 768) {
-    // Ustal wartość szerokości, poniżej której pokazujemy alert
     alert("Proszę skorzystać z komputera");
-    // Opcjonalnie możesz usunąć zawartość, aby nie była widoczna
-    document.body.innerHTML = "";
+
+    // Przekierowanie po kliknięciu "OK"
+    window.location.href = "https://www.google.com";
+
+    // Automatyczne przekierowanie po 15 sekundach
+    setTimeout(function () {
+      window.location.href = "https://www.google.com";
+    }, 15000);
   }
 }
 
